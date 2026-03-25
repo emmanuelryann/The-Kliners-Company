@@ -1,6 +1,6 @@
 /* ===== Testimonials ===== */
 .testimonials {
-  padding: clamp(3rem, 2.5rem + 2.5vw, 6rem) 0;
+  padding: clamp(3rem, 6.50vw, 6rem) 0;
   background-color: var(--color-bg);
 }
 
@@ -10,14 +10,14 @@
 }
 
 .testimonials__header {
-  margin-bottom: clamp(2rem, 1.5rem + 2vw, 3rem);
+  margin-bottom: clamp(2rem, 4.40vw, 3rem);
 }
 
 .testimonials__header-left {
   display: flex;
   align-items: center;
   gap: 1rem;
-  margin-bottom: clamp(0.75rem, 0.5rem + 0.5vw, 1rem);
+  margin-bottom: clamp(0.75rem, 1.30vw, 1rem);
 }
 
 .testimonials__avatars {
@@ -25,8 +25,8 @@
 }
 
 .testimonials__avatar-thumb {
-  width: clamp(1.75rem, 1.5rem + 0.8vw, 2.5rem);
-  height: clamp(1.75rem, 1.5rem + 0.8vw, 2.5rem);
+  width: clamp(1.75rem, 3.20vw, 2.5rem);
+  height: clamp(1.75rem, 3.20vw, 2.5rem);
   border-radius: 50%;
   object-fit: cover;
   border: 0.15rem solid var(--color-white);
@@ -50,12 +50,12 @@
 
 .testimonials__star {
   color: var(--color-star);
-  font-size: clamp(0.8rem, 0.75rem + 0.2vw, 1rem);
+  font-size: clamp(0.8rem, 1.40vw, 1rem);
 }
 
 .testimonials__rating-text {
-  font-size: clamp(0.7rem, 0.66rem + 0.15vw, 0.8rem);
-  color: var(--color-text-muted);
+  font-size: var(--fs-base);
+  color: var(--color-text-light);
 }
 
 .testimonials__title {
@@ -74,14 +74,14 @@
   background-color: var(--color-bg-light);
   border: 0.0625rem solid var(--color-border);
   border-radius: 0.75rem;
-  padding: clamp(1.2rem, 1rem + 0.8vw, 1.75rem);
+  padding: clamp(1.2rem, 2.40vw, 1.75rem);
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
 }
 
 .testimonials__quote {
-  font-size: clamp(0.85rem, 0.8rem + 0.2vw, 0.95rem);
+  font-size: var(--fs-base);
   color: var(--color-text);
   line-height: 1.6;
   flex: 1;
@@ -96,14 +96,14 @@
 }
 
 .testimonials__author-avatar {
-  width: 2rem;
-  height: 2rem;
+  width: max(2rem, 3.2vw);
+  height: max(2rem, 3.2vw);
   border-radius: 50%;
   object-fit: cover;
 }
 
 .testimonials__author-name {
-  font-size: clamp(0.8rem, 0.76rem + 0.15vw, 0.9rem);
+  font-size: var(--fs-base);
   font-weight: 600;
   color: var(--color-dark);
 }

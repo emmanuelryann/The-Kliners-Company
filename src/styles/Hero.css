@@ -1,83 +1,153 @@
 /* ===== Hero ===== */
+.hero-section {
+  padding: 0 clamp(0.5rem, 1vw, 1.5rem);
+  width: 100%;
+}
+
 .hero {
   position: relative;
   width: 100%;
-  min-height: max(75vh, 28rem);
+  max-width: min(96rem, 100vw);
+  margin: 0 auto;
+  height: calc(100svh - clamp(4.5rem, 8.20vw, 6.5rem));
+  min-height: 35rem;
   display: flex;
   align-items: flex-end;
   background-image: url('https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=1400&q=80');
   background-size: cover;
   background-position: center top;
   background-repeat: no-repeat;
-  margin-top: clamp(3.2rem, 2.8rem + 1.5vw, 4.5rem);
+  border-radius: clamp(1rem, 2.30vw, 2rem);
+  overflow: hidden;
 }
 
 .hero__overlay {
   position: absolute;
   inset: 0;
   background: linear-gradient(
-    to top,
-    rgba(0, 0, 0, 0.7) 0%,
+    to bottom right,
+    rgba(0, 0, 0, 0.6) 0%,
     rgba(0, 0, 0, 0.3) 40%,
-    rgba(0, 0, 0, 0.05) 100%
+    rgba(0, 0, 0, 0.1) 100%
   );
 }
 
 .hero__content {
   position: relative;
   z-index: 1;
-  max-width: min(75rem, 92%);
-  margin: 0 auto;
   width: 100%;
-  padding: clamp(2rem, 1.5rem + 2vw, 4rem) 0;
-  padding-bottom: clamp(2.5rem, 2rem + 2.5vw, 5rem);
+  padding: clamp(2rem, 4.60vw, 5rem) clamp(2rem, 4vw, 5rem);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.hero__text-block {
+  flex: 1 1 35rem;
+  max-width: min(40rem, 100vw);
+  display: flex;
+  flex-direction: column;
+  gap: clamp(1rem, 3.5vw, 2.5rem);
 }
 
 .hero__title {
-  font-size: clamp(2rem, 1.5rem + 2.5vw, 3.5rem);
-  font-weight: 700;
   color: var(--color-white);
-  line-height: 1.15;
-  margin-bottom: clamp(0.75rem, 0.5rem + 0.5vw, 1.25rem);
+  margin-bottom: 0;
 }
 
 .hero__subtitle {
-  font-size: clamp(0.8rem, 0.76rem + 0.2vw, 1rem);
-  color: rgba(255, 255, 255, 0.8);
-  max-width: 32rem;
+  font-size: var(--fs-base);
+  color: rgba(255, 255, 255, 0.85);
   line-height: 1.6;
-  margin-bottom: clamp(1.2rem, 1rem + 0.8vw, 2rem);
+  margin-bottom: 0;
+  max-width: min(32rem, 100vw);
 }
 
 .hero__actions {
   display: flex;
+  align-items: center;
+  gap: clamp(1rem, 2.30vw, 2rem);
   flex-wrap: wrap;
-  gap: 0.75rem;
 }
 
-.hero__btn {
-  padding: clamp(0.7rem, 0.6rem + 0.35vw, 0.9rem) clamp(1.2rem, 1rem + 0.8vw, 2rem);
-  border-radius: 0.5rem;
-  font-size: clamp(0.8rem, 0.76rem + 0.2vw, 0.95rem);
-}
-
-.hero__btn--outline {
+.hero__btn-text {
   color: var(--color-white);
-  border-color: rgba(255, 255, 255, 0.4);
+  font-size: var(--fs-base);
+  font-weight: 500;
+  text-decoration: underline;
+  text-decoration-color: rgba(255, 255, 255, 0.5);
+  text-underline-offset: 0.3em;
+  transition: text-decoration-color var(--transition-fast);
 }
 
-.hero__btn--outline:hover {
-  border-color: var(--color-white);
-  background-color: rgba(255, 255, 255, 0.1);
+.hero__btn-text:hover {
+  text-decoration-color: var(--color-white);
 }
 
-.hero__btn-arrow {
-  font-size: clamp(0.9rem, 0.85rem + 0.2vw, 1.1rem);
+.hero__review-widget {
+  flex: 0 1 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
-@media (max-width: 48rem) {
-  .hero {
-    min-height: max(60vh, 22rem);
-    align-items: flex-end;
+.hero__review-top {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.hero__review-avatars {
+  display: flex;
+}
+
+.hero__review-avatar {
+  width: clamp(2rem, 3.88vw, 2.5rem);
+  height: clamp(2rem, 3.88vw, 2.5rem);
+  border-radius: 50%;
+  object-fit: cover;
+  border: 0.15rem solid rgba(255, 255, 255, 0.8);
+  margin-right: -0.75rem;
+}
+
+.hero__review-avatar:last-child {
+  margin-right: 0;
+}
+
+.hero__review-rating {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--color-white);
+  font-size: var(--fs-base);
+}
+
+.hero__review-star {
+  color: var(--color-star);
+  font-size: 1.1em;
+}
+
+.hero__review-score {
+  font-weight: 700;
+}
+
+.hero__review-count {
+  font-weight: 400;
+  opacity: 0.8;
+}
+
+.hero__review-text {
+  font-size: var(--fs-base);
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.5;
+}
+
+@media (max-width: 60rem) {
+  .hero__content {
+    flex-direction: column;
+    align-items: flex-start;
   }
 }

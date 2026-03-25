@@ -9,15 +9,18 @@
 
 :root {
   /* Colors */
-  --color-primary: #3b6bf5;
-  --color-primary-dark: #2a52d4;
-  --color-dark: #1a1a2e;
+  --color-primary: #2a64f6;
+  --color-primary-dark: #1e4bd8;
+  --color-dark: #000000;
   --color-dark-blue: #1e2a4a;
   --color-text: #333333;
-  --color-text-light: #666666;
-  --color-text-muted: #999999;
+  --color-text-light: #2b2a2a;
+  /* --color-text-muted: #999999; */
+  /* --color-text-muted: #2b2a2a; */
   --color-white: #ffffff;
   --color-bg: #ffffff;
+  /* --color-page-bg: #e1e1e1; */
+  --color-page-bg: #ececec;
   --color-bg-light: #f8f9fa;
   --color-bg-dark: #111827;
   --color-border: #e5e7eb;
@@ -27,6 +30,8 @@
 
   /* Font */
   --font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  --fs-base: clamp(0.85rem, 1vw, 1rem);
+  --fs-secondary: clamp(0.95rem, 1.64vw, 1.1rem);
 
   /* Transitions */
   --transition-fast: 0.2s ease;
@@ -41,7 +46,7 @@ html {
 body {
   font-family: var(--font-family);
   color: var(--color-text);
-  background-color: var(--color-bg);
+  background-color: var(--color-page-bg);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -90,73 +95,49 @@ h1, h2, h3, h4, h5, h6 {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  font-size: clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem);
+  font-size: var(--fs-base);
   font-weight: 500;
-  color: var(--color-text-muted);
+  color: var(--color-text-light);
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  margin-bottom: clamp(0.5rem, 0.4rem + 0.5vw, 1rem);
-}
-
-.section-label .dot {
-  width: 0.375rem;
-  height: 0.375rem;
-  background-color: var(--color-primary);
-  border-radius: 50%;
-  display: inline-block;
+  margin-bottom: clamp(1rem, 1.60vw, 1.5rem);
 }
 
 .section-title {
-  font-size: clamp(1.5rem, 1.2rem + 1.5vw, 2.25rem);
+  font-size: clamp(1rem, 3vw, 3rem);
   font-weight: 700;
   color: var(--color-dark);
   line-height: 1.2;
-  margin-bottom: clamp(0.75rem, 0.5rem + 0.5vw, 1rem);
-}
-
-.section-subtitle {
-  font-size: clamp(0.875rem, 0.82rem + 0.25vw, 1rem);
-  color: var(--color-text-light);
-  line-height: 1.6;
-  max-width: 42rem;
+  letter-spacing: -0.02em;
 }
 
 .btn-primary {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  padding: clamp(0.7rem, 0.6rem + 0.4vw, 0.9rem) clamp(1.2rem, 1rem + 0.8vw, 2rem);
+  padding: clamp(0.5rem, 0.92vw, 0.7rem) clamp(1.2rem, 2.26vw, 1.8rem);
+  font-size: var(--fs-base);
+  border-radius: 2rem;
   background-color: var(--color-primary);
   color: var(--color-white);
-  font-size: clamp(0.8rem, 0.76rem + 0.2vw, 0.95rem);
   font-weight: 500;
-  border-radius: 0.5rem;
-  transition: background-color var(--transition-fast);
+  transition: opacity var(--transition-fast);
   cursor: pointer;
 }
 
 .btn-primary:hover {
-  background-color: var(--color-primary-dark);
+  opacity: 0.9;
+  background-color: var(--color-primary);
 }
 
-.btn-outline {
+.btn-secondary {
   display: inline-flex;
   align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  padding: clamp(0.7rem, 0.6rem + 0.4vw, 0.9rem) clamp(1.2rem, 1rem + 0.8vw, 2rem);
-  background-color: transparent;
-  color: var(--color-dark);
-  font-size: clamp(0.8rem, 0.76rem + 0.2vw, 0.95rem);
-  font-weight: 500;
-  border: 0.125rem solid var(--color-border);
-  border-radius: 0.5rem;
-  transition: border-color var(--transition-fast), background-color var(--transition-fast);
-  cursor: pointer;
+  font-size: var(--fs-base);
+  background-color: var(--color-dark);
+  color: var(--color-white);
+  border-radius: 2rem;
+  padding: 0.5rem 0.5rem 0.5rem clamp(1rem, 1.80vw, 1.5rem);
+  transition: opacity var(--transition-fast);
 }
 
-.btn-outline:hover {
-  border-color: var(--color-primary);
-  background-color: var(--color-bg-light);
+.btn-secondary:hover {
+  opacity: 0.85;
 }

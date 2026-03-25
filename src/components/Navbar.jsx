@@ -34,12 +34,15 @@ export default function Navbar() {
     setSideNavOpen(false);
   };
 
+  const toggleMenu = () => {
+    setSideNavOpen(!sideNavOpen);
+  };
+
   return (
-    <>
+    <div className="navbar-wrapper">
       <nav className={`navbar${scrolled ? ' navbar--scrolled' : ''}`}>
         <div className="navbar__inner">
           <a href="#home" className="navbar__logo">
-            <span className="navbar__logo-icon">●</span>
             <span className="navbar__logo-text">HOMYCLEAN</span>
           </a>
 
@@ -76,8 +79,7 @@ export default function Navbar() {
       {/* Side Navigation */}
       <aside className={`sidenav${sideNavOpen ? ' sidenav--open' : ''}`}>
         <div className="sidenav__header">
-          <a href="#home" className="navbar__logo" onClick={handleNavClick}>
-            <span className="navbar__logo-icon">●</span>
+          <a href="#home" className="sidenav__logo" onClick={handleNavClick}>
             <span className="navbar__logo-text">HOMYCLEAN</span>
           </a>
           <button
@@ -101,6 +103,6 @@ export default function Navbar() {
           Contact Us
         </a>
       </aside>
-    </>
+    </div>
   );
 }

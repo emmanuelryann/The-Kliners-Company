@@ -1,64 +1,52 @@
-/* ===== Navbar ===== */
-.navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
+.navbar-wrapper {
+  padding: clamp(0.5rem, 1vw, 1.5rem);
   width: 100%;
+  position: sticky;
+  top: 0;
   z-index: 1000;
-  background-color: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(0.5rem);
-  transition: box-shadow var(--transition-base);
 }
 
-.navbar--scrolled {
-  box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.08);
+.navbar {
+  background-color: #0b0b0b;
+  border-radius: clamp(1.5rem, 3.60vw, 3rem);
+  width: 100%;
+  max-width: min(96rem, 100vw);
+  margin: 0 auto;
+  transition: all var(--transition-base);
 }
 
 .navbar__inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-width: min(75rem, 92%);
-  margin: 0 auto;
-  padding: clamp(0.8rem, 0.7rem + 0.4vw, 1.1rem) 0;
+  padding: clamp(0.6rem, 1.20vw, 1rem) clamp(1.5rem, 3.60vw, 3rem);
 }
 
 .navbar__logo {
   display: flex;
   align-items: center;
-  gap: 0.4rem;
   font-weight: 700;
-  font-size: clamp(0.95rem, 0.9rem + 0.25vw, 1.15rem);
-  color: var(--color-dark);
-}
-
-.navbar__logo-icon {
-  color: var(--color-green);
-  font-size: clamp(0.6rem, 0.55rem + 0.2vw, 0.8rem);
+  font-size: clamp(1.1rem, 1.95vw, 1.4rem);
+  color: var(--color-white);
+  letter-spacing: -0.02em;
 }
 
 .navbar__links {
   display: flex;
   align-items: center;
-  gap: clamp(1rem, 0.8rem + 1vw, 2rem);
+  gap: clamp(1.2rem, 3.10vw, 2.5rem);
 }
 
 .navbar__link {
-  font-size: clamp(0.8rem, 0.76rem + 0.2vw, 0.95rem);
+  font-size: var(--fs-base);
   font-weight: 400;
-  color: var(--color-text-light);
+  color: rgba(255, 255, 255, 0.8);
   transition: color var(--transition-fast);
   position: relative;
 }
 
 .navbar__link:hover {
-  color: var(--color-dark);
-}
-
-.navbar__cta {
-  padding: clamp(0.5rem, 0.45rem + 0.2vw, 0.65rem) clamp(1rem, 0.9rem + 0.5vw, 1.5rem);
-  font-size: clamp(0.8rem, 0.76rem + 0.2vw, 0.9rem);
-  border-radius: 0.5rem;
+  color: var(--color-white);
 }
 
 .navbar__hamburger {
@@ -66,8 +54,8 @@
   flex-direction: column;
   justify-content: center;
   gap: 0.3rem;
-  width: 2rem;
-  height: 2rem;
+  width: max(2rem, 3.2vw);
+  height: max(2rem, 3.2vw);
   cursor: pointer;
   position: relative;
   z-index: 1100;
@@ -76,8 +64,8 @@
 .navbar__hamburger-line {
   display: block;
   width: 100%;
-  height: 0.15rem;
-  background-color: var(--color-dark);
+  height: max(0.15rem, 0.24vw);
+  background-color: var(--color-white);
   border-radius: 0.125rem;
   transition: transform var(--transition-base), opacity var(--transition-base);
   transform-origin: center;
@@ -125,7 +113,7 @@
   transition: transform var(--transition-base);
   display: flex;
   flex-direction: column;
-  padding: clamp(1rem, 0.8rem + 0.8vw, 1.5rem);
+  padding: clamp(1rem, 2.08vw, 1.5rem);
 }
 
 .sidenav--open {
@@ -136,11 +124,17 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: clamp(1.5rem, 1.2rem + 1vw, 2.5rem);
+  margin-bottom: clamp(1.5rem, 2.92vw, 2.5rem);
+}
+
+.sidenav__logo {
+  font-weight: 700;
+  font-size: clamp(1.1rem, 1.95vw, 1.4rem);
+  color: var(--color-dark);
 }
 
 .sidenav__close {
-  font-size: clamp(1.1rem, 1rem + 0.3vw, 1.4rem);
+  font-size: clamp(1.1rem, 1.90vw, 1.4rem);
   color: var(--color-text);
   cursor: pointer;
   line-height: 1;
@@ -153,9 +147,9 @@
 }
 
 .sidenav__link {
-  font-size: clamp(0.95rem, 0.9rem + 0.2vw, 1.05rem);
+  font-size: var(--fs-base);
   color: var(--color-text);
-  padding: clamp(0.6rem, 0.5rem + 0.3vw, 0.85rem) 0;
+  padding: clamp(0.6rem, 1.10vw, 0.85rem) 0;
   transition: color var(--transition-fast);
   border-bottom: 0.0625rem solid var(--color-border);
 }
@@ -165,7 +159,7 @@
 }
 
 .sidenav__cta {
-  margin-top: clamp(1.5rem, 1.2rem + 1vw, 2rem);
+  margin-top: clamp(1.5rem, 2.92vw, 2rem);
   text-align: center;
   border-radius: 0.5rem;
 }
