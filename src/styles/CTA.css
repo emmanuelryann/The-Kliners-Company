@@ -7,7 +7,7 @@
 .cta {
   max-width: min(96rem, 100vw);
   margin: 0 auto;
-  padding: clamp(3rem, 6.90vw, 6rem);
+  padding: clamp(1rem, 5vw, 4rem);
 }
 
 .cta__content {
@@ -30,14 +30,21 @@
 .cta__card {
   background-color: var(--color-white);
   border-radius: clamp(1.5rem, 3.60vw, 2.5rem);
-  padding: clamp(2rem, 5.10vw, 3.5rem);
-  max-width: min(38rem, 100vw);
+  padding: clamp(2rem, 1.5vw, 3.5rem);
+  width: 100%;
   box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.05);
 }
 
 .cta__card-icon {
-  font-size: max(2.5rem, 4vw);
-  margin-bottom: 1.5rem;
+  width: clamp(1.5rem, 2vw, 2rem);
+  height: clamp(1.5rem, 2vw, 2rem);
+  margin-bottom: 1rem;
+  color: var(--color-dark);
+}
+
+.cta__card-icon svg {
+  width: 100%;
+  height: 100%;
 }
 
 .cta__card-text {
@@ -71,14 +78,16 @@
 
 .cta__image {
   width: 100%;
-  height: auto;
-  min-height: 30rem;
+  height: clamp(14rem, 20vw, 20rem);
   object-fit: cover;
   border-radius: clamp(1.5rem, 3.60vw, 2.5rem);
 }
 
 @media (max-width: 65rem) {
+  .cta-section {
+    padding-top: 3rem;
+  }
   .cta__content {
-    flex-direction: column;
+    gap: clamp(1rem, 3vw, 5rem);
   }
 }

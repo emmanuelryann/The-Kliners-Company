@@ -34,7 +34,7 @@ function StarRating({ count }) {
 export default function Testimonials() {
   return (
     <section id="testimonials" className="testimonials">
-      <div className="testimonials__container">
+      <div className="testimonials__container reveal">
         <div className="testimonials__header">
           <div className="testimonials__header-left">
             <div className="testimonials__avatars">

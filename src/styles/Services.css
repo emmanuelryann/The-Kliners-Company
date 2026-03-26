@@ -5,9 +5,9 @@
 }
 
 .services {
-  max-width: 96rem;
+  max-width: min(96rem, 100vw);
   margin: 0 auto;
-  padding: clamp(3rem, 6.90vw, 6rem);
+  padding: clamp(1rem, 5vw, 4rem);
 }
 
 /* Header */
@@ -48,7 +48,7 @@
   display: flex;
   flex-wrap: nowrap;
   gap: clamp(1rem, 1.8vw, 2rem);
-  overflow-x: auto;
+  /* overflow-x: auto; */
   padding-bottom: 2rem;
   scrollbar-width: none;
   -ms-overflow-style: none;
@@ -59,7 +59,7 @@
 }
 
 .services__card {
-  flex: 1 0 20rem;
+  flex: 1 0 15rem;
   display: flex;
   flex-direction: column;
   gap: clamp(0.75rem, 1vw, 1.25rem);
@@ -79,8 +79,10 @@
   transition: transform var(--transition-base);
 }
 
-.services__card:hover .services__card-image {
-  transform: scale(1.05);
+@media (hover: hover) {
+  .services__card:hover .services__card-image {
+    transform: scale(1.05);
+  }
 }
 
 .services__card-title {
@@ -97,6 +99,10 @@
 }
 
 @media (max-width: 85rem) {
+  .services-section {
+    padding-top: 3rem;
+  }
+  
   .services__grid {
     flex-wrap: wrap;
     justify-content: center;

@@ -1,9 +1,12 @@
 import '../styles/WhyChooseUs.css';
+// import cleaningTable from '../assets/cleaning-table.jpg'
+import vacuumCleaner from '../assets/vacuum-cleaner.jpg'
+import cleaningFloor from '../assets/cleaning-floor.jpg'
 
 const features = [
   {
     icon: (
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.25" strokeLinecap="round" strokeLinejoin="round">
         <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
         <circle cx="9" cy="7" r="4"></circle>
         <polyline points="16 11 18 13 22 9"></polyline>
@@ -14,7 +17,7 @@ const features = [
   },
   {
     icon: (
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.25" strokeLinecap="round" strokeLinejoin="round">
         <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path>
         <line x1="7" y1="7" x2="7.01" y2="7"></line>
       </svg>
@@ -24,7 +27,7 @@ const features = [
   },
   {
     icon: (
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.25" strokeLinecap="round" strokeLinejoin="round">
         <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
         <polyline points="14 2 14 8 20 8"></polyline>
         <line x1="12" y1="18" x2="12" y2="12"></line>
@@ -36,7 +39,7 @@ const features = [
   },
   {
     icon: (
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.25" strokeLinecap="round" strokeLinejoin="round">
         <circle cx="12" cy="12" r="10"></circle>
         <path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8"></path>
         <line x1="12" y1="18" x2="12" y2="22"></line>
@@ -51,14 +54,14 @@ const features = [
 export default function WhyChooseUs() {
   return (
     <section id="why-choose-us" className="wcu-section">
-      <div className="wcu">
+      <div className="wcu reveal">
         <div className="wcu__header">
-          <span className="section-label">
+          <span className="wcu-label section-label">
             &mdash; Why Choose Us
           </span>
           <div className="wcu__header-content">
             <h2 className="wcu__title section-title">
-              Trusted By Homes, Loved<br />By Families
+              Trusted By Homes, Loved By Families
             </h2>
             <div className="wcu__header-right">
               <p className="wcu__desc">
@@ -85,14 +88,14 @@ export default function WhyChooseUs() {
             </div>
             <div className="wcu__gallery-side">
               <img 
-                src="https://images.unsplash.com/photo-1527515637462-cff94eebd21c?w=500&q=80" 
+                src={vacuumCleaner} 
                 alt="Cleaning table" 
-                className="wcu__img" 
+                className="wcu__img wcu__img1" 
               />
               <img 
-                src="https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=500&q=80" 
-                alt="Clean room" 
-                className="wcu__img" 
+                src={cleaningFloor} 
+                alt="Clean floor" 
+                className="wcu__img wcu__img2" 
               />
             </div>
           </div>

@@ -1,10 +1,12 @@
 import '../styles/Services.css';
+import couchCleaning from '../assets/couch-cleaning.jpg'
+import sinkCleaning from '../assets/sink-cleaning.jpg'
 
 const services = [
   {
     title: 'Sofa And Carpet Refresh',
     description: 'Remove Stains, Odors, And Bring Back Comfort To Your Furniture.',
-    image: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=500&q=80',
+    image: couchCleaning,
   },
   {
     title: 'Complete Deep Home Cleaning',
@@ -19,14 +21,14 @@ const services = [
   {
     title: 'Bathroom & Kitchen Shine',
     description: 'Deep Scrubbing To Remove Grime And Germs From Tough Corners.',
-    image: 'https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=500&q=80',
+    image: sinkCleaning,
   },
 ];
 
 export default function Services() {
   return (
     <section id="services" className="services-section">
-      <div className="services">
+      <div className="services reveal">
         <div className="services__header">
           <span className="section-label">
             &mdash; Our Services

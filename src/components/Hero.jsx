@@ -9,44 +9,57 @@ const avatarImages = [
 export default function Hero() {
   return (
     <section id="home" className="hero-section">
-      <div className="hero">
-        <div className="hero__overlay"></div>
-        <div className="hero__content">
-          <div className="hero__text-block">
+      <div className="hero reveal">
+        <div className="hero__container">
+          {/* Left Content */}
+          <div className="hero__left">
             <h1 className="hero__title section-title">
-              Custom home<br />cleaning services
+              A Clean Home<br />A Fresh Start
             </h1>
+            
             <p className="hero__subtitle">
-              Enjoy a spotless space with our trusted cleaning professionals.<br />
-              Eco-friendly, flexible, and always on time.
+              Professional cleaning you can trust whether it's your<br />
+              home, office, or that one messy corner.
             </p>
+            
             <div className="hero__actions">
-              <a href="#cta" className="hero__btn-primary btn-primary">
-                Book Now
+              <a href="#cta" className="hero__explore-btn btn-secondary">
+                <span className="hero__explore-text">Book a Cleaner</span>
+                <span className="hero__explore-icon">↗</span>
               </a>
-              <a href="#services" className="hero__btn-text">
-                See Our Services
-              </a>
+            </div>
+            
+            <div className="hero__review-widget">
+              <div className="hero__review-top">
+                <div className="hero__review-avatars">
+                  {avatarImages.map((src, i) => (
+                    <img key={i} src={src} className="hero__review-avatar" alt="Reviewer" />
+                  ))}
+                </div>
+                <div className="hero__review-rating">
+                  <span className="hero__review-star">★</span>
+                  <span className="hero__review-score">4.5</span>
+                  <span className="hero__review-count">( 4,234+ reviews )</span>
+                </div>
+              </div>
+              <p className="hero__review-text">
+                Over 500 people have trusted us and left<br />
+                positive reviews. Join them!
+              </p>
             </div>
           </div>
-          
-          <div className="hero__review-widget">
-            <div className="hero__review-top">
-              <div className="hero__review-avatars">
-                {avatarImages.map((src, i) => (
-                  <img key={i} src={src} className="hero__review-avatar" alt="Reviewer" />
-                ))}
-              </div>
-              <div className="hero__review-rating">
-                <span className="hero__review-star">★</span>
-                <span className="hero__review-score">4.5</span>
-                <span className="hero__review-count">( 4,234+ reviews )</span>
-              </div>
+
+          {/* Right Content */}
+          <div className="hero__right">
+            <img 
+              src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=1400&q=80" 
+              alt="Professional cleaner vacuuming" 
+              className="hero__img" 
+            />
+            <div className="hero__sticker">
+              <span className="hero__sticker-number">100+</span>
+              <span className="hero__sticker-text">Cleaning Experts</span>
             </div>
-            <p className="hero__review-text">
-              Over 500 people have trusted us and left<br />
-              positive reviews. Join them!
-            </p>
           </div>
         </div>
       </div>

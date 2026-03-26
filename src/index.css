@@ -10,11 +10,9 @@
 :root {
   /* Colors */
   --color-primary: #2a64f6;
-  --color-primary-dark: #1e4bd8;
   --color-dark: #000000;
-  --color-dark-blue: #1e2a4a;
   --color-text: #333333;
-  --color-text-light: #2b2a2a;
+  --color-text-light: #1a1919;
   /* --color-text-muted: #999999; */
   /* --color-text-muted: #2b2a2a; */
   --color-white: #ffffff;
@@ -22,16 +20,15 @@
   /* --color-page-bg: #e1e1e1; */
   --color-page-bg: #ececec;
   --color-bg-light: #f8f9fa;
-  --color-bg-dark: #111827;
   --color-border: #e5e7eb;
   --color-overlay: rgba(0, 0, 0, 0.5);
   --color-star: #fbbf24;
-  --color-green: #22c55e;
 
   /* Font */
   --font-family: 'Inter', system-ui, -apple-system, sans-serif;
   --fs-base: clamp(0.85rem, 1vw, 1rem);
   --fs-secondary: clamp(0.95rem, 1.64vw, 1.1rem);
+  --card-border-radius: 1rem;
 
   /* Transitions */
   --transition-fast: 0.2s ease;
@@ -46,7 +43,18 @@ html {
 body {
   font-family: var(--font-family);
   color: var(--color-text);
-  background-color: var(--color-page-bg);
+  /* background: linear-gradient(135deg, rgba(9, 9, 124, 0.2) 0%, rgba(34, 197, 94, 0.15) 100%); */
+  /* background: linear-gradient(
+    90deg,
+    #5a90cd 0%,
+    #4f82d4 25%,
+    #4475d6 50%,
+    #3f67d8 75%,
+    #3d5ddb 100%
+  ); */
+
+  background: linear-gradient(135deg, #5a90cdf3 0%, #3d5ddbdb 100%);
+  background-attachment: fixed;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -60,6 +68,8 @@ body.no-scroll {
 #root {
   width: 100%;
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 img {
@@ -92,7 +102,8 @@ h1, h2, h3, h4, h5, h6 {
 
 /* ===== Utility ===== */
 .section-label {
-  display: inline-flex;
+  display: flex;
+  width: fit-content;
   align-items: center;
   gap: 0.5rem;
   font-size: var(--fs-base);
@@ -104,7 +115,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .section-title {
-  font-size: clamp(1rem, 3vw, 3rem);
+  font-size: clamp(1.5rem, 3vw, 3rem);
   font-weight: 700;
   color: var(--color-dark);
   line-height: 1.2;
@@ -122,9 +133,11 @@ h1, h2, h3, h4, h5, h6 {
   cursor: pointer;
 }
 
-.btn-primary:hover {
-  opacity: 0.9;
-  background-color: var(--color-primary);
+@media (hover: hover) {
+  .btn-primary:hover {
+    opacity: 0.9;
+    background-color: var(--color-primary);
+  }
 }
 
 .btn-secondary {
@@ -138,6 +151,20 @@ h1, h2, h3, h4, h5, h6 {
   transition: opacity var(--transition-fast);
 }
 
-.btn-secondary:hover {
-  opacity: 0.85;
+@media (hover: hover) {
+  .btn-secondary:hover {
+    opacity: 0.85;
+  }
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(3rem);
+  transition: opacity 1.3s ease-out, transform 1.3s ease-out;
+  will-change: opacity, transform;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
 }

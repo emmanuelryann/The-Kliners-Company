@@ -21,13 +21,10 @@ export default function Footer() {
       <div className="footer__container">
         <div className="footer__col footer__col--brand">
           <a href="#home" className="footer__logo">
-            HOMYCLEAN 
+            THE KLINERS COMPANY LTD 
           </a>
           <p className="footer__brand-tagline">
             Making Your World Shine, One<br />Home At A Time.
-          </p>
-          <p className="footer__copyright">
-            © 2026 HomyClean. All Rights Reserved.
           </p>
         </div>
 
@@ -67,12 +64,25 @@ export default function Footer() {
           <p className="footer__spam-note">No Spam, Only Sparkling Ideas!</p>
           
           <div className="footer__socials">
-            <a href="#" className="footer__social-link" aria-label="X (Twitter)">✕</a>
-            <a href="#" className="footer__social-link" aria-label="Facebook">f</a>
-            <a href="#" className="footer__social-link" aria-label="Instagram">in</a>
-            <a href="#" className="footer__social-link" aria-label="LinkedIn">Li</a>
+            <a href="#" className="footer__social-link" aria-label="X (Twitter)">
+              <i className="fa-brands fa-x-twitter"></i>
+            </a>
+            <a href="#" className="footer__social-link" aria-label="Facebook">
+              <i className="fa-brands fa-facebook-f"></i>
+            </a>
+            <a href="#" className="footer__social-link" aria-label="Instagram">
+              <i className="fa-brands fa-instagram"></i>
+            </a>
+            <a href="#" className="footer__social-link" aria-label="LinkedIn">
+              <i className="fa-brands fa-linkedin-in"></i>
+            </a>
           </div>
         </div>
+      </div>
+      <div className="footer__bottom border-t">
+        <p className="footer__copyright">
+          © 2026 The Kliners Company. All Rights Reserved.
+        </p>
       </div>
     </footer>
   );

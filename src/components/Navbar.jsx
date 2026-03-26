@@ -56,7 +56,7 @@ export default function Navbar() {
             ))}
           </ul>
 
-          <a href="#cta" className="navbar__cta btn-primary">Contact Us</a>
+          <a href="#cta" className="btn-primary navbar__cta">Contact Us</a>
 
           <button
             className={`navbar__hamburger${sideNavOpen ? ' navbar__hamburger--active' : ''}`}
@@ -80,7 +80,7 @@ export default function Navbar() {
       <aside className={`sidenav${sideNavOpen ? ' sidenav--open' : ''}`}>
         <div className="sidenav__header">
           <a href="#home" className="sidenav__logo" onClick={handleNavClick}>
-            <span className="navbar__logo-text">HOMYCLEAN</span>
+            <span className="navbar__logo-text">THE KLINERS COMPANY</span>
           </a>
           <button
             className="sidenav__close"

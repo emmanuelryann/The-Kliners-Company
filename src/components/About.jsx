@@ -1,11 +1,12 @@
 import '../styles/About.css';
+import aboutUsImage from '../assets/about-us-image.jpg'
 
 export default function About() {
   return (
     <section id="about" className="about-section">
-      <div className="about">
+      <div className="about reveal">
         <div className="about__header">
-          <span className="section-label">
+          <span className="about-label section-label">
             &mdash; About Us
           </span>
           <div className="about__header-content">
@@ -32,7 +33,7 @@ export default function About() {
           <div className="about__grid-left">
             <div className="about__col about__col--image">
               <img
-                src="https://images.unsplash.com/photo-1527515637462-cff94eebd21c?w=600&q=80"
+                src={aboutUsImage}
                 alt="Professional cleaner mopping"
                 className="about__img"
               />
