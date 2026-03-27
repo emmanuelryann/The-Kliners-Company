@@ -1,5 +1,4 @@
 import '../styles/WhyChooseUs.css';
-// import cleaningTable from '../assets/cleaning-table.jpg'
 import wcuMain from '../assets/wcu-main.jpg'
 import vacuumCleaner from '../assets/vacuum-cleaner.jpg'
 import cleaningFloor from '../assets/cleaning-floor.jpg'
