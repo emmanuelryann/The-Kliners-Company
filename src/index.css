@@ -55,8 +55,12 @@ body {
   overflow-x: hidden;
 }
 
+html.no-scroll,
 body.no-scroll {
   overflow: hidden;
+  position: fixed;
+  width: 100%;
+  height: 100%;
 }
 
 #root {
