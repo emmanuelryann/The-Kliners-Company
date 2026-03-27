@@ -4,23 +4,23 @@ import sinkCleaning from '../assets/sink-cleaning.jpg'
 
 const services = [
   {
-    title: 'Sofa And Carpet Refresh',
-    description: 'Remove Stains, Odors, And Bring Back Comfort To Your Furniture.',
+    title: 'Residential / home cleaning',
+    description: 'Professional cleaning for your living spaces, ensuring a spotless and healthy home environment for you and your family.',
     image: couchCleaning,
   },
   {
-    title: 'Complete Deep Home Cleaning',
-    description: 'Thorough Dusting, Mopping, And Sanitizing To Keep Your Home Fresh.',
+    title: 'Post-construction cleaning',
+    description: 'Specialized cleaning to remove dust, debris, and residue after renovation or new builds, making your space ready for use.',
     image: 'https://images.unsplash.com/photo-1584820927498-cfe5211fd8bf?w=500&q=80',
   },
   {
-    title: 'Professional Office Cleaning',
-    description: 'Keep Work Areas Spotless, Organized, And Boost Team Productivity.',
+    title: 'Commercial / office cleaning',
+    description: 'Customized cleaning solutions for workspaces, offices, and commercial buildings to maintain a professional and hygienic atmosphere.',
     image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?w=500&q=80',
   },
   {
-    title: 'Bathroom & Kitchen Shine',
-    description: 'Deep Scrubbing To Remove Grime And Germs From Tough Corners.',
+    title: 'Sanitation and disinfection cleaning',
+    description: 'Deep sanitization using industry-grade disinfectants to eliminate germs and viruses, keeping your environment safe.',
     image: sinkCleaning,
   },
 ];

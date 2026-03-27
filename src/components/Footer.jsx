@@ -50,18 +50,14 @@ export default function Footer() {
           </ul>
         </div>
 
-        <div className="footer__col footer__col--newsletter">
-          <h4 className="footer__col-title">Get Cleaning Tips & Updates</h4>
-          <form className="footer__form" onSubmit={(e) => e.preventDefault()}>
-            <input 
-              type="email" 
-              placeholder="Email" 
-              className="footer__input"
-              required 
-            />
-            <button type="submit" className="footer__submit">Subscribe</button>
-          </form>
-          <p className="footer__spam-note">No Spam, Only Sparkling Ideas!</p>
+        <div className="footer__col footer__col--contact">
+          <h4 className="footer__col-title">Talk To Us</h4>
+          <ul className="footer__contact-list">
+            <li><i className="fa-solid fa-phone"></i> +233 547 015 074</li>
+            <li><i className="fa-solid fa-phone"></i> +233 532 500 445</li>
+            <li><i className="fa-solid fa-location-dot"></i> Oyibi off Madina - Dodowa, Accra</li>
+            <li><i className="fa-solid fa-envelope"></i> amelewuemmanuel6@gmail.com</li>
+          </ul>
           
           <div className="footer__socials">
             <a href="#" className="footer__social-link" aria-label="X (Twitter)">

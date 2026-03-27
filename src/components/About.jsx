@@ -59,7 +59,7 @@ export default function About() {
           <div className="about__col about__col--quote">
             <span className="about__quote-icon">”</span>
             <p className="about__quote-text">
-              HomyClean turned my messy apartment into a fresh, spotless space in just a few hours. Their team was friendly, on time, and truly professional. I finally feel comfortable at home again!
+              The Kliners Company turned my messy apartment into a fresh, spotless space in just a few hours. Their team was friendly, on time, and truly professional. I finally feel comfortable at home again!
             </p>
             <div className="about__author">
               <img

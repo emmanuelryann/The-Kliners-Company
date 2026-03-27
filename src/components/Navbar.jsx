@@ -66,7 +66,7 @@ export default function Navbar() {
     <div className="navbar-wrapper">
       <nav className={`navbar${scrolled ? ' navbar--scrolled' : ''}`}>
         <div className="navbar__inner">
-          <a href="#home" className="navbar__logo">
+          <a href="#" className="navbar__logo">
             <img src={logoImage} alt="The Kliners Company Logo" className="navbar__logo-img" />
           </a>
 
@@ -103,7 +103,7 @@ export default function Navbar() {
       {/* Side Navigation */}
       <aside className={`sidenav${sideNavOpen ? ' sidenav--open' : ''}`}>
         <div className="sidenav__header">
-          <a href="#home" className="sidenav__logo" onClick={handleNavClick}>
+          <a href="#" className="sidenav__logo" onClick={handleNavClick}>
             <span className="navbar__logo-text">THE KLINERS <br /> COMPANY</span>
           </a>
           <button
