@@ -26,8 +26,8 @@ export default function CTA() {
                 and enjoy a spotless, fresh home without any hassle.
               </p>
               <button className="cta__btn btn-secondary">
-                <span className="cta__btn-text">Book a Cleaner</span>
-                <span className="cta__btn-icon">↗</span>
+                <span className="btn-text">Book a Cleaner</span>
+                <span className="btn-icon"><span>↗</span></span>
               </button>
             </div>
           </div>

@@ -40,20 +40,15 @@ html {
   font-size: 100%;
 }
 
+[id] {
+  scroll-margin-top: clamp(4.5rem, 10vh, 7rem);
+}
+
 body {
   font-family: var(--font-family);
   color: var(--color-text);
-  /* background: linear-gradient(135deg, rgba(9, 9, 124, 0.2) 0%, rgba(34, 197, 94, 0.15) 100%); */
-  /* background: linear-gradient(
-    90deg,
-    #5a90cd 0%,
-    #4f82d4 25%,
-    #4475d6 50%,
-    #3f67d8 75%,
-    #3d5ddb 100%
-  ); */
-
-  background: linear-gradient(135deg, #5a90cdf3 0%, #3d5ddbdb 100%);
+  background-color: #f4f7ff;
+  background-image: linear-gradient(135deg, rgba(42, 100, 246, 0.12) 0%, rgba(255, 255, 255, 1) 100%);
   background-attachment: fixed;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
@@ -146,14 +141,42 @@ h1, h2, h3, h4, h5, h6 {
   font-size: var(--fs-base);
   background-color: var(--color-dark);
   color: var(--color-white);
-  border-radius: 2rem;
-  padding: 0.5rem 0.5rem 0.5rem clamp(1rem, 1.80vw, 1.5rem);
+  border-radius: 3rem;
+  padding: 0.4rem 0.4rem 0.4rem clamp(1rem, 1.80vw, 1.5rem);
   transition: opacity var(--transition-fast);
+  gap: 0.75rem;
+}
+
+.btn-text {
+  font-size: var(--fs-base);
+  font-weight: 500;
+  margin-right: 0.2rem;
+}
+
+.btn-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: clamp(2.2rem, 3.5vw, 2.8rem);
+  height: clamp(2.2rem, 3.5vw, 2.8rem);
+  background-color: rgba(255, 255, 255, 0.15);
+  border-radius: 50%;
+  font-size: 1.1rem;
+  line-height: 1;
+}
+
+.btn-icon span {
+  display: block;
+  transition: transform var(--transition-base);
 }
 
 @media (hover: hover) {
   .btn-secondary:hover {
-    opacity: 0.85;
+    opacity: 0.9;
+  }
+  
+  .btn-secondary:hover .btn-icon span {
+    transform: translate(3px, -3px);
   }
 }
 

@@ -18,9 +18,9 @@
   margin-bottom: clamp(3rem, 3vw, 5rem);
 }
 
-.about-label {
+/* .about-label {
   margin-bottom: 0;
-}
+} */
 
 .about__header-content {
   display: flex;
@@ -33,6 +33,7 @@
 .about__title {
   flex: 1 1 35rem;
   max-width: min(45rem, 100vw);
+  line-height: 1.5;
 }
 
 .about__header-right {
@@ -48,23 +49,6 @@
   color: var(--color-text-light);
   line-height: 1.6;
   margin-bottom: clamp(1.2rem, 2.30vw, 2rem);
-}
-
-.about__explore-text {
-  font-size: var(--fs-base);
-  font-weight: 500;
-  margin-right: 0.75rem;
-}
-
-.about__explore-icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: clamp(2rem, 3.88vw, 2.5rem);
-  height: clamp(2rem, 3.88vw, 2.5rem);
-  background-color: rgba(255, 255, 255, 0.15);
-  border-radius: 50%;
-  font-size: 1.1rem;
 }
 
 /* Three Column Grid (Now Flex) */
@@ -170,14 +154,7 @@
 
 /* Quote Column */
 .about__col--quote {
-  background: linear-gradient(
-    90deg,
-    #5a90cd 0%,
-    #3f6fc0 30%,
-    #2f5bb0 55%,
-    #1f3fa3 75%,
-    #191a8c 100%
-  );
+  background: linear-gradient(135deg, #5a90cde3 0%, #3d5ddbe4 100%);
   border-radius: var(--card-border-radius);
   padding: clamp(1.5rem, 2.5vw, 2.5rem);
   flex: 1 1 15rem;

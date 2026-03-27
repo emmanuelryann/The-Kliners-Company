@@ -27,6 +27,7 @@
   flex: 1 1 35rem;
   max-width: 45rem;
   margin-top: 0;
+  line-height: 1.5;
 }
 
 .services__header-right {
@@ -48,7 +49,6 @@
   display: flex;
   flex-wrap: nowrap;
   gap: clamp(1rem, 1.8vw, 2rem);
-  /* overflow-x: auto; */
   padding-bottom: 2rem;
   scrollbar-width: none;
   -ms-overflow-style: none;
@@ -63,6 +63,7 @@
   display: flex;
   flex-direction: column;
   gap: clamp(0.75rem, 1vw, 1.25rem);
+  /* max-width: min(45rem, 100vw); */
 }
 
 .services__card-image-wrapper {

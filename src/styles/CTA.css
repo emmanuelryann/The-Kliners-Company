@@ -25,6 +25,7 @@
 
 .cta__title {
   margin-bottom: clamp(2.5rem, 4vw, 4rem);
+  line-height: 1.5;
 }
 
 .cta__card {
@@ -60,17 +61,6 @@
   margin-right: 0.75rem;
 }
 
-.cta__btn-icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: clamp(2rem, 3.88vw, 2.5rem);
-  height: clamp(2rem, 3.88vw, 2.5rem);
-  background-color: rgba(255, 255, 255, 0.15);
-  border-radius: 50%;
-  font-size: 1.1rem;
-}
-
 .cta__right {
   flex: 1 1 35rem;
   width: 100%;
@@ -88,6 +78,31 @@
     padding-top: 3rem;
   }
   .cta__content {
+    flex-direction: column;
+    align-items: flex-start;
     gap: clamp(1rem, 3vw, 5rem);
+  }
+  
+  .cta__left,
+  .cta__right {
+    display: contents;
+  }
+  
+  .cta__left > .section-label {
+    order: 1;
+  }
+  
+  .cta__title {
+    order: 2;
+  }
+  
+  .cta__image {
+    order: 3;
+    width: 100%;
+    height: auto;
+  }
+  
+  .cta__card {
+    order: 4;
   }
 }

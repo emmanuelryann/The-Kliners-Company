@@ -1,5 +1,6 @@
 import '../styles/WhyChooseUs.css';
 // import cleaningTable from '../assets/cleaning-table.jpg'
+import wcuMain from '../assets/wcu-main.jpg'
 import vacuumCleaner from '../assets/vacuum-cleaner.jpg'
 import cleaningFloor from '../assets/cleaning-floor.jpg'
 
@@ -70,8 +71,8 @@ export default function WhyChooseUs() {
                 every home and office.
               </p>
               <a href="#cta" className="wcu__btn btn-secondary">
-                <span className="wcu__btn-text">Book a Cleaner</span>
-                <span className="wcu__btn-icon">↗</span>
+                <span className="btn-text">Book a Cleaner</span>
+                <span className="btn-icon"><span>↗</span></span>
               </a>
             </div>
           </div>
@@ -81,7 +82,7 @@ export default function WhyChooseUs() {
           <div className="wcu__gallery">
             <div className="wcu__gallery-main">
               <img 
-                src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=800&q=80" 
+                src={wcuMain}
                 alt="Cleaner vacuuming" 
                 className="wcu__img wcu__img--main" 
               />

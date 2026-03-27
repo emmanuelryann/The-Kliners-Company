@@ -24,8 +24,8 @@ export default function Hero() {
             
             <div className="hero__actions">
               <a href="#cta" className="hero__explore-btn btn-secondary">
-                <span className="hero__explore-text">Book a Cleaner</span>
-                <span className="hero__explore-icon">↗</span>
+                <span className="btn-text">Book a Cleaner</span>
+                <span className="btn-icon"><span>↗</span></span>
               </a>
             </div>
             

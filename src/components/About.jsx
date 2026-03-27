@@ -21,8 +21,8 @@ export default function About() {
                 care, honesty, and eco-friendly solutions.
               </p>
               <a href="#services" className="about__explore-btn btn-secondary">
-                <span className="about__explore-text">Explore us</span>
-                <span className="about__explore-icon">↗</span>
+                <span className="btn-text">Explore us</span>
+                <span className="btn-icon"><span>↗</span></span>
               </a>
             </div>
           </div>

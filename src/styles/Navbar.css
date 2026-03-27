@@ -38,6 +38,12 @@
   letter-spacing: -0.02em;
 }
 
+.navbar__logo-img {
+  height: clamp(1.5rem, 4.5vw, 4rem);
+  width: auto;
+  display: block;
+}
+
 .navbar__links {
   display: flex;
   align-items: center;
@@ -145,10 +151,11 @@
   background-color: var(--color-white);
   z-index: 1100;
   transform: translateX(100%);
-  transition: transform var(--transition-base);
+  transition: transform var(--transition-base) cubic-bezier(0.16, 1, 0.3, 1);
   display: flex;
   flex-direction: column;
-  padding: clamp(1rem, 4vw, 6rem) clamp(1rem, 2.08vw, 1.5rem);
+  padding: clamp(1.5rem, 5vw, 2.5rem) clamp(1.5rem, 5vw, 2.5rem);
+  box-shadow: -4px 0 24px rgba(0, 0, 0, 0.08);
 }
 
 .sidenav--open {
@@ -159,49 +166,74 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: clamp(1.5rem, 4vw, 4rem);
+  margin-bottom: clamp(2rem, 6vw, 3rem);
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .sidenav__logo {
   font-weight: 700;
-  font-size: clamp(1.1rem, 1.95vw, 1.4rem);
+  font-size: clamp(1rem, 3.5vw, 1.2rem);
   color: var(--color-dark);
+  letter-spacing: -0.02em;
 }
 
 .sidenav__close {
-  font-size: clamp(1.1rem, 1.90vw, 1.4rem);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: clamp(2.2rem, 8vw, 2.5rem);
+  height: clamp(2.2rem, 8vw, 2.5rem);
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.04);
+  font-size: clamp(1rem, 4vw, 1.2rem);
   color: var(--color-text);
   cursor: pointer;
   line-height: 1;
+  transition: background-color var(--transition-fast);
+}
+
+@media (hover: hover) {
+  .sidenav__close:hover {
+    background-color: rgba(0, 0, 0, 0.08);
+  }
 }
 
 .sidenav__links {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 2.3rem;
+  align-items: flex-start;
+  gap: 0.5rem;
+  width: 100%;
 }
 
 .sidenav__link {
+  display: block;
+  width: 100%;
   font-size: var(--fs-secondary);
-  font-weight: 600;
+  font-weight: 500;
   color: var(--color-text);
-  padding: clamp(0.6rem, 1.10vw, 0.85rem) 0;
-  transition: color var(--transition-fast);
+  padding: clamp(0.75rem, 2vw, 1rem) 0;
+  transition: color var(--transition-fast), padding-left var(--transition-base);
 }
 
 @media (hover: hover) {
   .sidenav__link:hover {
     color: var(--color-primary);
+    padding-left: 0.5rem;
   }
 }
 
 .sidenav__cta {
-  margin-top: clamp(1.5rem, 4vw, 2rem);
+  margin-top: auto;
   text-align: center;
-  width: fit-content;
-  align-self: center;
+  width: 100%;
+  padding: clamp(0.8rem, 2.5vw, 1rem);
+  font-weight: 600;
   background-color: var(--color-dark);
+  color: var(--color-white);
+  border-radius: 3rem;
+  transition: opacity var(--transition-fast);
 }
 
 @media (hover: hover) {

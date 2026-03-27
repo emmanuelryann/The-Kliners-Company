@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import '../styles/Navbar.css';
+import logoImage from '../assets/kliners-logo2.png';
 
 const navLinks = [
   { label: 'Home', href: '#home' },
@@ -22,20 +23,43 @@ export default function Navbar() {
   }, []);
 
   useEffect(() => {
-    if (sideNavOpen) {
-      document.body.classList.add('no-scroll');
-    } else {
+    const mediaQuery = window.matchMedia('(min-width: 65.01rem)');
+    const handleResize = (e) => {
+      if (e.matches) {
+        setSideNavOpen(false);
+      }
+    };
+    
+    // Initial check
+    if (mediaQuery.matches) setSideNavOpen(false);
+
+    mediaQuery.addEventListener('change', handleResize);
+    return () => mediaQuery.removeEventListener('change', handleResize);
+  }, []);
+
+  useEffect(() => {
+    if (!sideNavOpen) return;
+
+    document.body.classList.add('no-scroll');
+    document.documentElement.classList.add('no-scroll');
+
+    const preventDefault = (e) => {
+      if (!e.target.closest('.sidenav')) {
+        if (e.cancelable) e.preventDefault();
+      }
+    };
+
+      document.addEventListener('touchmove', preventDefault, { passive: false })
+
+    return () => {
       document.body.classList.remove('no-scroll');
-    }
-    return () => document.body.classList.remove('no-scroll');
+      document.documentElement.classList.remove('no-scroll');
+      document.removeEventListener('touchmove', preventDefault);
+    };
   }, [sideNavOpen]);
 
   const handleNavClick = () => {
     setSideNavOpen(false);
-  };
-
-  const toggleMenu = () => {
-    setSideNavOpen(!sideNavOpen);
   };
 
   return (
@@ -43,7 +67,7 @@ export default function Navbar() {
       <nav className={`navbar${scrolled ? ' navbar--scrolled' : ''}`}>
         <div className="navbar__inner">
           <a href="#home" className="navbar__logo">
-            <span className="navbar__logo-text">HOMYCLEAN</span>
+            <img src={logoImage} alt="The Kliners Company Logo" className="navbar__logo-img" />
           </a>
 
           <ul className="navbar__links">
@@ -80,7 +104,7 @@ export default function Navbar() {
       <aside className={`sidenav${sideNavOpen ? ' sidenav--open' : ''}`}>
         <div className="sidenav__header">
           <a href="#home" className="sidenav__logo" onClick={handleNavClick}>
-            <span className="navbar__logo-text">THE KLINERS COMPANY</span>
+            <span className="navbar__logo-text">THE KLINERS <br /> COMPANY</span>
           </a>
           <button
             className="sidenav__close"
