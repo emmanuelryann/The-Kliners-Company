@@ -12,7 +12,7 @@ const popularServices = [
   { label: 'Deep Cleaning', href: '#services' },
   { label: 'Sofa & Carpet Care', href: '#services' },
   { label: 'Office Cleaning', href: '#services' },
-  { label: 'Bathroom & Kitchen', href: '#services' },
+  { label: 'Sanitation & Disinfection', href: '#services' },
 ];
 
 export default function Footer() {
@@ -24,7 +24,7 @@ export default function Footer() {
             THE KLINERS COMPANY LTD 
           </a>
           <p className="footer__brand-tagline">
-            Making Your World Shine, One<br />Home At A Time.
+            Making Your World Shine, One<br />Space At A Time.
           </p>
         </div>
 
